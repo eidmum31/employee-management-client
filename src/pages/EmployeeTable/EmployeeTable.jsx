@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const EmployeeTable = ({ employee, indx,deleteEmployee }) => {
   const {_id, img, name, department, position, salary } = employee;
@@ -37,7 +38,7 @@ const EmployeeTable = ({ employee, indx,deleteEmployee }) => {
         </button>
         
       </th>
-      <th><button className="btn btn-outline btn-secondary">Edit</button></th>
+      <th><Link to={`/employees/${_id}`}><button className="btn btn-outline btn-secondary">Edit</button></Link></th>
     </tr>
   );
 };
