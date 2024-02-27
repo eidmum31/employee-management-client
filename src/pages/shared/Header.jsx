@@ -3,19 +3,21 @@ import { Link } from "react-router-dom";
 import { FaPlusCircle, FaRegUser } from "react-icons/fa";
 import { GrAdd } from "react-icons/gr";
 import { FaChartBar } from "react-icons/fa";
-const Header = () => {
+const Header = ({children}) => {
   return (
     //sidebar options
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col items-center justify-center">
-        {/* Page content here */}
+      
+
         <label
           htmlFor="my-drawer-2"
           className="btn btn-block drawer-button lg:hidden"
         >
           View Options
         </label>
+        {children}
       </div>
       <div className="drawer-side">
         <label
