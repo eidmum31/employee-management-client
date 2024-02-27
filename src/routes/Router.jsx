@@ -4,12 +4,14 @@ import {
   createBrowserRouter,
   
 } from "react-router-dom";
+import Header from "../pages/shared/Header";
+import MainLayout from "../pages/layout/MainLayout";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <MainLayout></MainLayout>,
   },
 ]);
 export default router;
