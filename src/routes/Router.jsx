@@ -7,6 +7,8 @@ import {
 import Header from "../pages/shared/Header";
 import MainLayout from "../pages/layout/MainLayout";
 import NewEmployee from "../pages/NewEmployee/NewEmployee";
+import AllEmployee from "../pages/AllEmployee/AllEmployee";
+
 
 
 const router = createBrowserRouter([
@@ -15,8 +17,13 @@ const router = createBrowserRouter([
     element: <MainLayout></MainLayout>,//common layout for all
     children:[
         {
-            path:'/employees',
+            path:'/newEmployee',
             element:<NewEmployee></NewEmployee> //employee form page
+        },
+        {
+          path:'/allEmployees',
+          element:<AllEmployee></AllEmployee>,
+
         }
     ]
   },

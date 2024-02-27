@@ -8,7 +8,7 @@ const Header = ({children}) => {
     //sidebar options
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content flex flex-col items-center justify-center">
+      <div className="drawer-content flex flex-col items-center">
       
 
         <label
@@ -27,8 +27,8 @@ const Header = ({children}) => {
         ></label>
         <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
           {/* Sidebar content here */}
-          <Link style={{boxShadow:"0 0 5px"}} className="flex font-semibold mb-3 p-2 rounded hover:bg-slate-300"><FaRegUser className="me-2 text-2xl" /> <span className="text-xl">Manage Employees</span></Link>
-          <Link style={{boxShadow:"0 0 5px"}}  className="flex font-semibold mb-3 p-2 rounded hover:bg-slate-300"><GrAdd   className="me-2 text-2xl" /> <span className="text-xl">New Employee</span></Link>
+          <Link to={'/allEmployees'}  style={{boxShadow:"0 0 5px"}} className="flex font-semibold mb-3 p-2 rounded hover:bg-slate-300"><FaRegUser className="me-2 text-2xl" /> <span className="text-xl">Manage Employees</span></Link>
+          <Link to={'/newEmployee'} style={{boxShadow:"0 0 5px"}}  className="flex font-semibold mb-3 p-2 rounded hover:bg-slate-300"><GrAdd   className="me-2 text-2xl" /> <span className="text-xl">New Employee</span></Link>
           <Link style={{boxShadow:"0 0 5px"}}  className="flex font-semibold p-2 rounded hover:bg-slate-300"><FaChartBar  className="me-2 text-2xl" /> <span className="text-xl">Analytics Dashboard</span></Link>
         </ul>
       </div>
