@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const EmployeeTable = ({ employee, indx,deleteEmployee }) => {
-  const {_id, img, name, department, position, salary } = employee;
+const EmployeeTable = ({ employee, indx, deleteEmployee }) => {
+  const { _id, img, name, department, position, salary } = employee;
   return (
     <tr>
       <th>{indx + 1}</th>
       <td>
         <div className="flex items-center gap-3">
           <div className="avatar">
-            <div className="mask mask-squircle w-12 h-12">
-              <img src={img} alt="Avatar Tailwind CSS Component" />
+            <div className="w-12 rounded-full">
+              <img src={img} />
             </div>
           </div>
         </div>
@@ -20,7 +20,10 @@ const EmployeeTable = ({ employee, indx,deleteEmployee }) => {
       <td>{position}</td>
       <td>{`BDT ` + salary}</td>
       <th>
-        <button onClick={()=>deleteEmployee(_id)}  className="btn btn-circle btn-outline me-2 mb-2">
+        <button
+          onClick={() => deleteEmployee(_id)}
+          className="btn btn-circle btn-outline me-2 mb-2"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -36,9 +39,12 @@ const EmployeeTable = ({ employee, indx,deleteEmployee }) => {
             />
           </svg>
         </button>
-        
       </th>
-      <th><Link to={`/${_id}`}><button className="btn btn-outline btn-secondary">Edit</button></Link></th>
+      <th>
+        <Link to={`/${_id}`}>
+          <button className="btn btn-outline btn-secondary">Edit</button>
+        </Link>
+      </th>
     </tr>
   );
 };
