@@ -11,29 +11,29 @@ import ChartLayout from "../pages/layout/ChartLayout";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/employees",
     element: <MainLayout></MainLayout>, //common layout for all
     children: [
       {
-        path: "/",
+        path: "/employees",
         element: <AllEmployee></AllEmployee>,
       },
       {
-        path: "/newEmployee",
+        path: "/employees/newEmployee",
         element: <NewEmployee></NewEmployee>, //employee form page
       },
       {
-        path: "/allEmployees",
+        path: "/employees/allEmployees",
         element: <AllEmployee></AllEmployee>,
       },
       {
-        path: "/:id",
+        path: "/employees/:id",
         element: <EditEmployee></EditEmployee>,
         loader: ({ params }) =>
           fetch(`https://worried-sweatsuit-bat.cyclic.app/employees/${params.id}`),
       },
       {
-        path: "/analyctics",
+        path: "/employees/analyctics",
         element: <ChartLayout></ChartLayout>,
       },
     ],
