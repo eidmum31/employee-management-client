@@ -11,19 +11,19 @@ import ChartLayout from "../pages/layout/ChartLayout";
 
 const router = createBrowserRouter([
   {
-    path: "/employees",
+    path: "/",
     element: <MainLayout></MainLayout>, //common layout for all
     children: [
       {
-        path: "/employees",
+        path: "/",
         element: <AllEmployee></AllEmployee>,
       },
       {
-        path: "/employees/newEmployee",
+        path: "/newEmployee",
         element: <NewEmployee></NewEmployee>, //employee form page
       },
       {
-        path: "/employees/allEmployees",
+        path: "/allEmployees",
         element: <AllEmployee></AllEmployee>,
       },
       {
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
           fetch(`https://worried-sweatsuit-bat.cyclic.app/employees/${params.id}`),
       },
       {
-        path: "/employees/analyctics",
+        path: "/analyctics",
         element: <ChartLayout></ChartLayout>,
       },
     ],

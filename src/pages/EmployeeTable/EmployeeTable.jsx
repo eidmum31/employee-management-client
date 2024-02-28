@@ -41,7 +41,7 @@ const EmployeeTable = ({ employee, indx, deleteEmployee }) => {
         </button>
       </th>
       <th>
-        <Link to={`/${_id}`}>
+        <Link to={`/employees/${_id}`}>
           <button className="btn btn-outline btn-secondary">Edit</button>
         </Link>
       </th>
