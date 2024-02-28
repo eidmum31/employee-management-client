@@ -47,8 +47,18 @@ const NewEmployee = () => {
         salary,
         number,
       };
-      axios.post("https://worried-sweatsuit-bat.cyclic.app/employees", data).then((res) => {
-        if (res.data) {
+      fetch("https://worried-sweatsuit-bat.cyclic.app/employees",{
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+      .then(res=>res.json())
+      
+      .then((data) => {
+        if (data.insertedId) {
+          
           Swal.fire({
             title: "Good job!",
             text: "New Employee Added!",
