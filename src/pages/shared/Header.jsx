@@ -29,7 +29,7 @@ const Header = ({children}) => {
           {/* Sidebar content here */}
           <Link to={'/employees/allEmployees'}  style={{boxShadow:"0 0 5px"}} className="flex font-semibold mb-3 p-2 rounded hover:bg-slate-300"><FaRegUser className="me-2 text-2xl" /> <span className="text-xl">Manage Employees</span></Link>
           <Link to={'/employees/newEmployee'} style={{boxShadow:"0 0 5px"}}  className="flex font-semibold mb-3 p-2 rounded hover:bg-slate-300"><GrAdd   className="me-2 text-2xl" /> <span className="text-xl">New Employee</span></Link>
-          <Link style={{boxShadow:"0 0 5px"}}  className="flex font-semibold p-2 rounded hover:bg-slate-300"><FaChartBar  className="me-2 text-2xl" /> <span className="text-xl">Analytics Dashboard</span></Link>
+          <Link to={`/employees/analyctics`} style={{boxShadow:"0 0 5px"}}  className="flex font-semibold p-2 rounded hover:bg-slate-300"><FaChartBar  className="me-2 text-2xl" /> <span className="text-xl">Analytics Dashboard</span></Link>
         </ul>
       </div>
     </div>

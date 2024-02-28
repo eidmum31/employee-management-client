@@ -26,7 +26,6 @@ const NewEmployee = () => {
     const salary = form.salary.value;
     const number = form.number.value;
 
-    
     try {
       const formData = new FormData();
       formData.append("image", imageFile);
@@ -42,25 +41,21 @@ const NewEmployee = () => {
         img: uploadedImageUrl,
         name,
         dob,
-        position:position.toLowerCase(),
-        department:department.toLowerCase(),
-        status:status.toLowerCase(),
+        position: position,
+        department: department,
+        status: status,
         salary,
         number,
       };
-      axios.post("http://127.0.0.1:5000/employees",data)
-      .then(res=>{
-        if(res.data)
-          {
-            Swal.fire({
-              title: "Good job!",
-              text: "New Employee Added!",
-              icon: "success"
-            });
-          }
-      })
-    
-       
+      axios.post("http://127.0.0.1:5000/employees", data).then((res) => {
+        if (res.data) {
+          Swal.fire({
+            title: "Good job!",
+            text: "New Employee Added!",
+            icon: "success",
+          });
+        }
+      });
     } catch (error) {
       Swal.fire({
         title: "error!",
@@ -68,7 +63,6 @@ const NewEmployee = () => {
         icon: "error",
       });
     }
-    
   };
   return (
     <div>
@@ -115,42 +109,64 @@ const NewEmployee = () => {
               required
             />
           </div>
+  
           <div className="form-control">
             <label className="label">
               <span className="label-text">Position</span>
             </label>
-            <input
-              type="text"
-              placeholder="Enter Employee Position"
-              className="input input-bordered"
-              name="position"
-              required
-            />
+            <select defaultValue={"Pick from the options"} name="position" className="select select-bordered w-full max-w-xs">
+              <option disabled>
+                Pick from the options
+              </option>
+              <option>Front-end Developer</option>
+              <option>Back-end Developer</option>
+              <option>Database Administrator</option>
+              <option>Project Manager</option>
+              <option>Chief Executive Officer (CEO)</option>
+              <option>Financial Analyst</option>
+              <option>Finance Manager</option>
+              <option>Marketing Manager</option>
+              <option>Market Research Analyst</option>
+              <option>HR Coordinator</option>
+              <option>HR Manager</option>
+              <option>Sales Manager</option>
+              <option>Sales Support Specialist</option>
+              <option>Sales Representative</option>
+
+              
+            </select>
           </div>
           <div className="form-control">
             <label className="label">
               <span className="label-text">Department</span>
             </label>
-            <input
-              type="text"
-              placeholder="Enter Employee Department"
-              className="input input-bordered"
-              name="department"
-              required
-            />
+            <select defaultValue={"Pick from the options"} name="department" className="select select-bordered w-full max-w-xs">
+              <option disabled>
+                Pick from the options
+              </option>
+              <option>IT</option>
+              <option>Management</option>
+              <option>Finance</option>
+              <option>Marketing</option>
+              <option>Sales</option>
+              <option>HR</option>
+              
+            </select>
           </div>
           <div className="form-control">
             <label className="label">
               <span className="label-text">Employment Status</span>
             </label>
-            <input
-              type="text"
-              placeholder="Full-time/Intern/Remote"
-              className="input input-bordered"
-              name="status"
-              required
-            />
+            <select defaultValue={"Pick from the options"} name="status" className="select select-bordered w-full max-w-xs">
+              <option disabled>
+                Pick from the options
+              </option>
+              <option>Full-Time</option>
+              <option>Remote</option>
+              <option>Intern</option>
+            </select>
           </div>
+
           <div className="form-control">
             <label className="label">
               <span className="label-text">Salary</span>

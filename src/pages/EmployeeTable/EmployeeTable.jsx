@@ -16,8 +16,8 @@ const EmployeeTable = ({ employee, indx,deleteEmployee }) => {
         </div>
       </td>
       <td>{name}</td>
-      <td>{department.toUpperCase()}</td>
-      <td>{position.toUpperCase()}</td>
+      <td>{department}</td>
+      <td>{position}</td>
       <td>{`BDT ` + salary}</td>
       <th>
         <button onClick={()=>deleteEmployee(_id)}  className="btn btn-circle btn-outline me-2 mb-2">
