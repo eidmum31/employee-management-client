@@ -16,7 +16,7 @@ import {
 const PositionChart = () => {
   const [positions, setPositions] = useState([]);
   useEffect(() => {
-    fetch(`http://127.0.0.1:5000/employees`)
+    fetch(`https://worried-sweatsuit-bat.cyclic.app/employees`)
       .then((res) => res.json())
       .then((data) => {
         const positionsCounts = {};

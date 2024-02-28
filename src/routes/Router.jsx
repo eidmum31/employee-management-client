@@ -30,7 +30,7 @@ const router = createBrowserRouter([
         path: "/:id",
         element: <EditEmployee></EditEmployee>,
         loader: ({ params }) =>
-          fetch(`http://127.0.0.1:5000/employees/${params.id}`),
+          fetch(`https://worried-sweatsuit-bat.cyclic.app/employees/${params.id}`),
       },
       {
         path: "/analyctics",

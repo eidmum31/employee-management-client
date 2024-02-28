@@ -34,7 +34,7 @@ const EditEmployee = () => {
       salary,
       number,
     };
-    fetch(`http://127.0.0.1:5000/employees/${_id}`, {
+    fetch(`https://worried-sweatsuit-bat.cyclic.app/employees/${_id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

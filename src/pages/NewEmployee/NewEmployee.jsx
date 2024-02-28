@@ -47,7 +47,7 @@ const NewEmployee = () => {
         salary,
         number,
       };
-      axios.post("http://127.0.0.1:5000/employees", data).then((res) => {
+      axios.post("https://worried-sweatsuit-bat.cyclic.app/employees", data).then((res) => {
         if (res.data) {
           Swal.fire({
             title: "Good job!",
