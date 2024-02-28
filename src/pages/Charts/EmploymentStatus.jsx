@@ -38,6 +38,7 @@ const EmploymentStatus = () => {
   return (
     <ResponsiveContainer
       className="border-4 border-black mt-5 mb-[120px]"
+      style={{boxShadow:"0 0 10px"}}
       width="100%"
       height="100%"
     >

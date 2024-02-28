@@ -54,6 +54,7 @@ const NewEmployee = () => {
             text: "New Employee Added!",
             icon: "success",
           });
+          form.reset();
         }
       });
     } catch (error) {

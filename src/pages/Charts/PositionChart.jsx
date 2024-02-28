@@ -38,7 +38,7 @@ const PositionChart = () => {
   }, []);
 
   return (
-    <ResponsiveContainer className="border-4 border-black mt-5 mb-[120px]" width="100%" height="100%">
+    <ResponsiveContainer style={{boxShadow:"0 0 10px"}} className="border-4 border-black mt-5 mb-[120px]" width="100%" height="100%">
       <BarChart
         width={500}
         height={300}

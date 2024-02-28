@@ -4,10 +4,10 @@ import { RadialBarChart, RadialBar, Legend, ResponsiveContainer } from 'recharts
 
 const Salary = () => {
     const style = {
-        top: '50%',
+        top: '10%',
         right: 0,
         transform: 'translate(0, -50%)',
-        lineHeight: '24px',
+        lineHeight: '15px',
       };
     const [salary,setSalary]=useState([]);
     useEffect(() => {
@@ -51,8 +51,8 @@ const Salary = () => {
           });
       }, []);
     return (
-        <ResponsiveContainer className="border-4 mt-5 mb-[200px] border-black" width="100%" height="100%">
-        <RadialBarChart cx="50%" cy="50%" innerRadius="10%" outerRadius="80%" barSize={10} data={salary}>
+        <ResponsiveContainer style={{boxShadow:"0 0 10px"}} className="border-4 mt-5 mb-[200px] border-black" width="100%" height="100%">
+        <RadialBarChart cx="50%" cy="50%" innerRadius="10%" outerRadius="80%" barSize={20} data={salary}>
           <RadialBar
             minAngle={15}
             label={{ position: 'insideStart', fill: '#fff' }}
